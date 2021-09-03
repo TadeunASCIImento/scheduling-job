@@ -8,14 +8,14 @@ public class Job {
 
 	private Integer id;
 	private String descricao;
-	private String data_maxima_execucao;
-	private String tempo_estimado;
+	private String dataMaximaConclusao;
+	private String tempoEstimado;
 
-	public Job(Integer id, String descricao, String data_maxima_execucao, String tempo_estimado) {
+	public Job(Integer id, String descricao, String dataMAximaConclusao, String tempoEstimado) {
 		this.id = id;
 		this.descricao = descricao;
-		this.data_maxima_execucao = data_maxima_execucao;
-		this.tempo_estimado = tempo_estimado;
+		this.dataMaximaConclusao = dataMAximaConclusao;
+		this.tempoEstimado = tempoEstimado;
 	}
 
 	public Integer getId() {
@@ -27,17 +27,17 @@ public class Job {
 	}
 
 	public String getData_maxima_execucao() {
-		return data_maxima_execucao;
+		return dataMaximaConclusao;
 	}
 
 	public String getTempo_estimado() {
-		return tempo_estimado;
+		return tempoEstimado;
 	}
 
 	@Override
 	public String toString() {
-		return "id:" + id + "\ndescricão:" + descricao + "\ndata máxima de execução: " + data_maxima_execucao
-				+ "\ntempo estimado: " + tempo_estimado;
+		return "id:" + id + "\ndescricão:" + descricao + "\ndata máxima de execução: " + dataMaximaConclusao
+				+ "\ntempo estimado: " + tempoEstimado;
 	}
 
 }
