@@ -1,5 +1,6 @@
 package br.com.jobs.testes.unitarios;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -22,6 +23,12 @@ public class JobTest {
 		List<Job> listJobs = new Scheduling().generateListJobs();
 		assertNotNull(listJobs);
 		assertTrue(listJobs.size() > 0);
+	}
+
+	@Test
+	public void deveValidarJanelaParaExecucaoDoJob() {
+		assertFalse(new Scheduling().validateJanelaExecucao("2019-11-11 14:00:00"));
+		assertTrue(new Scheduling().validateJanelaExecucao("2019-11-10 12:00:00"));
 	}
 
 }
