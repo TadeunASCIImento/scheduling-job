@@ -31,4 +31,9 @@ public class JobTest {
 		assertTrue(new Scheduling().validateJanelaExecucao("2019-11-10 12:00:00"));
 	}
 
+	@Test
+	public void deveRetornarJobsComTempoMaximoTotalParaExecucao() {
+
+	}
+
 }

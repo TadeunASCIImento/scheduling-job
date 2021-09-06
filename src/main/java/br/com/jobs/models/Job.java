@@ -26,18 +26,18 @@ public class Job {
 		return descricao;
 	}
 
-	public String getData_maxima_execucao() {
+	public String getDataMaximaConclusao() {
 		return dataMaximaConclusao;
 	}
 
-	public String getTempo_estimado() {
+	public String getTempoEstimado() {
 		return tempoEstimado;
 	}
 
 	@Override
 	public String toString() {
-		return "id:" + id + "\ndescricão:" + descricao + "\ndata máxima de execução: " + dataMaximaConclusao
-				+ "\ntempo estimado: " + tempoEstimado;
+		return "id:" + id + " descricão:" + descricao + " data máxima de execução: " + dataMaximaConclusao
+				+ " tempo estimado: " + tempoEstimado + "\n";
 	}
 
 }
