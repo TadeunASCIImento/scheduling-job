@@ -18,13 +18,12 @@ public class Scheduling {
 	}
 
 	public List<Job> generateListJobs() {
-//		Job job1 = new Job(1, "Importação de arquivos de fundos", "2019-11-10 12:00:00", "2 horas");
-//		Job job2 = new Job(2, "Importação de dados da Base Legada", "2019-11-11 12:00:00", "6 horas");
-//		Job job3 = new Job(3, "Importação de dados de integração", "2019-11-11 08:00:00", "4 horas");
-//		Job job4 = new Job(4, "Importação de dados de integração", "2019-11-11 08:00:00", "4 horas");
-//		Job job5 = new Job(5, "Importação de dados de integração", "2019-11-11 08:00:00", "7 horas");
-//		return Arrays.asList(job1, job2, job3, job4, job5);
-	return Arrays.asList();
+		Job job1 = new Job(1, "Importação de arquivos de fundos", "2019-11-10 12:00:00", "2 horas");
+		Job job2 = new Job(2, "Importação de dados da Base Legada", "2019-11-11 12:00:00", "6 horas");
+		Job job3 = new Job(3, "Importação de dados de integração", "2019-11-11 08:00:00", "4 horas");
+		Job job4 = new Job(4, "Importação de dados de integração", "2019-11-11 08:00:00", "4 horas");
+		Job job5 = new Job(5, "Importação de dados de integração", "2019-11-11 08:00:00", "7 horas");
+		return Arrays.asList(job1, job2, job3, job4, job5);
 	}
 
 	public static List<ArrayList<Job>> escalonarJobsParaExecucao(List<Job> jobs) {
