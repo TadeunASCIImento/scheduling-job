@@ -11,9 +11,12 @@ import br.com.jobs.models.Scheduling;
 public class Main {
 
 	public static void main(String[] args) {
-		Scheduling scheduling = new Scheduling();
-		List<ArrayList<Job>> escalonados = scheduling.escalonarJobsParaExecucao(new Scheduling().generateListJobs());
-		System.out.println(new Gson().toJson(escalonados));
+		List<ArrayList<Job>> agendamento = Scheduling.escalonarJobsParaExecucao(new Scheduling().generateListJobs());
+		if (agendamento.equals(null)) {
+			System.out.println("Não foram encontrados jobs para execução");
+		} else {
+			System.out.println(new Gson().toJson(agendamento));
+		}
 	}
 
 }
