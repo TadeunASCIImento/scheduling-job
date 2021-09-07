@@ -47,4 +47,25 @@ public class JobTest {
 
 	}
 
+	@Test
+	public void deveRetornarListaDeJobsParaExecucao() {
+		ArrayList<Job> _jobs = new ArrayList<Job>();
+		Integer total = 0;
+		List<Job> jobs = new Scheduling().generateListJobs();
+		for (int index = 0, len = jobs.size(); index < len; index++) {
+			if (Scheduling.formatTempoEstimado(jobs.get(index).getTempoEstimado()) != null) {
+				total += Scheduling.formatTempoEstimado(jobs.get(index).getTempoEstimado());
+				if (Scheduling.formatTempoEstimado(jobs.get(index).getTempoEstimado()) < Scheduling.tempoMaximoExecucao
+						&& total < Scheduling.tempoMaximoExecucao) {
+					_jobs.add(jobs.get(index));
+				}
+			}
+		}
+		List<ArrayList<Job>> escalonados = new ArrayList<ArrayList<Job>>();
+		escalonados.add(_jobs);
+
+		assertTrue(escalonados.size() > 0 && !escalonados.equals(null));
+
+	}
+
 }
