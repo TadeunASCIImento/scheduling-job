@@ -2,6 +2,8 @@ package br.com.jobs.models;
 
 /**
  * @author TadeunASCIImento
+ * 
+ *         Classe que representa o objeto job.
  *
  */
 public class Job {
