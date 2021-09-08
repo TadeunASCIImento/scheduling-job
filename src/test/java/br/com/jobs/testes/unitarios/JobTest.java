@@ -61,9 +61,15 @@ public class JobTest {
 				}
 			}
 		}
-		List<ArrayList<Job>> escalonados = new ArrayList<ArrayList<Job>>();
-		escalonados.add(_jobs);
+		List<ArrayList<Job>> __jobs = new ArrayList<ArrayList<Job>>();
+		__jobs.add(_jobs);
+		assertTrue(__jobs.size() > 0 && !__jobs.equals(null));
 
+	}
+
+	@Test
+	public void deveRetornarJobsEscalonadosParaExecucao() {
+		List<ArrayList<Job>> escalonados = Scheduling.escalonarJobsParaExecucao(new Scheduling().generateListJobs());
 		assertTrue(escalonados.size() > 0 && !escalonados.equals(null));
 
 	}
